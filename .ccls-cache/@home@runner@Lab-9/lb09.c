@@ -53,7 +53,7 @@ void findNext(int startingValue)
   nextValue = startingValue; // start looking at the user's starting value
 
   // these functions return 0 if the number inputted is not a significant number, so keep going until one of them returns something other than 0
-  while((isPerfectSquare(nextValue) == 0) || (calcSemisquare(nextValue) == 0))
+  while((isPerfectSquare(nextValue) == 0) || (findSemisquare(nextValue) == 0))
   {
     nextValue++; // add 1 to the next value to check the next number for significance
   }
