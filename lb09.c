@@ -146,4 +146,6 @@ void print(int output, int status)
   {
     printf("\nIdentified Value: %d\n", output);
     printf("Status: Semi-square\n");
+  }
+  return;
 }
