@@ -48,7 +48,7 @@ int isPerfectSquare(int number)
   int squareValue; // if the number is a perfect square, is the value of the square root of number.
 
   squareValue = 0; // sets the initial returned value to 0 in case it's not a perfect square 
-  for(index = 1; index < ((int) sqrt(number)) + 1; index++) // go one past the number to see if the number is the highest square root
+  for(index = ((int) sqrt(number) - 1); index < ((int) sqrt(number)) + 1; index++) // go one past the number to see if the number is the highest square root
   { 
     currentSquare = pow(index, 2);
     if(number == currentSquare) // if the number is equal to a calculated perfect square between 1 and the number, return 1 to signal that it is a perfect square
