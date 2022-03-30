@@ -12,6 +12,16 @@
 *
 ******+--***---*-*-*---*-**-*---*---**-*****--*****************************/
 
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+
+  return 0;
+}
 /*****+-**------*---**-*-**---*-*-*--*-*****--******************************
 *
 *  Function Information
@@ -28,14 +38,10 @@
 *  Function Description: 
 *
 ******+-**------*---**-*-**---*-*-*--*-*****--*****************************/
-#include <stdio.h>
-#include <math.h>
 
-//Declaring Fumctions
-
-
-int main(void) 
+int getInput()
 {
-  printf("Hello World\n");
-  return 0;
+  
+
+  
 }
