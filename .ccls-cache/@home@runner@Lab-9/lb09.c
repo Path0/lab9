@@ -4,7 +4,7 @@
 int getInput();
 int isPerfectSquare(int);
 int findPerfectSquare(int);
-int= findNext(int);
+void findNext(int);
 int calcSemisquare(int);
 int findSemisquare(int);
 
@@ -100,14 +100,14 @@ int calcSemisquare (int input)
 int findSemisquare(int b)
 {
   int valFound; // stores a 1 or 0, depending on the value has been found
-  int a; // 'a' value from eq
-  int c;
+  int a; // 'a' value from equation, a^2 is a perfect square
+  int c; // 
   
   valFound = 0;
   
   while(valFound == 0)
   {
-    ++b;
+    b++;
     for(a = 1; a < b; a++)
     {
       for(c = 1; c < a; c++)
