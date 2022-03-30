@@ -3,18 +3,23 @@
 
 int getInput();
 int isPerfectSquare(int);
-int findPerfectSquare(int);
-void findNext(int);
-int calcSemisquare(int);
-int findSemisquare(int);
+//void findNext(int);
+int findIndentifiedVal(int);
+void print(int, int);
 
 int main()
 {
   int startingNumber; // user's input, number to start looking for significant numbers 
+  int output;
+  int status;
   
   startingNumber = getInput();
 
-  findNext(startingNumber);
+  output = findIndentifiedVal(startingNumber);
+  status = isPerfectSquare(output);
+
+  print(output, status);
+  
   return 0;
 }
 
@@ -38,15 +43,15 @@ int isPerfectSquare(int number)
   for(index = 1; index < ((int) sqrt(number)) + 1; index++) // go one past the number to see if the number is the highest square root
   { 
     currentSquare = pow(index, 2);
-    if(number == currentSquare) // if the number is equal to a calculated perfect square between 1 and the number, return its value
+    if(number == currentSquare) // if the number is equal to a calculated perfect square between 1 and the number, return 1 to signal that it is a perfect square
     {
-      squareValue = index;
+      squareValue = 1;
     }
   }
   
   return squareValue;
 }
-
+/*
 void findNext(int startingValue)
 {
   int nextValue; // next integer value of significance
@@ -70,11 +75,11 @@ void findNext(int startingValue)
   }
   else // the only other option after the while loop is that it's a semisquare
   {
-    printf("\nIdentified Value :%d\n", calcSemisquare(nextValue));
+    printf("\nIdentified Value: %d\n", calcSemisquare(nextValue));
     printf("Status: Semi-square\n");
   }
 }
-
+*/
 
 int calcSemisquare (int input)
 {
@@ -102,18 +107,17 @@ int calcSemisquare (int input)
 
 
 
-int findSemisquare(int b)
+int findIdentifiedVal(int b)
 {
-  int valFound; // stores a 1 or 0, depending on the value has been found
-  int a; // 'a' value from equation, a^2 is a perfect square
-  int c; // 
+  int valFound; // stores a 0 or 1 for the while condition
+  int a; // the 'a' value in the equation
+  int c; // the 'c' value in the equation
   
   valFound = 0;
   
   while(valFound == 0)
   {
-    
-    for(a = 1; a < b++; a++)
+    for(a = 1; a < b; a++)
     {
       for(c = 1; c < a; c++)
       {
@@ -123,6 +127,23 @@ int findSemisquare(int b)
         }
       }
     }
+    if (valFound == 0)
+    {
+      ++b;
+    }
   }
   return b;
+}
+
+void print(int output, int status)
+{
+  if(status == 1) // if it's a perfect square, return that
+  {
+    printf("\nIdentified Value: %d\n", output);
+    printf("Status: Perfect square\n");
+  }
+  else // the only other option after the while loop is that it's a semisquare
+  {
+    printf("\nIdentified Value: %d\n", output);
+    printf("Status: Semi-square\n");
 }
