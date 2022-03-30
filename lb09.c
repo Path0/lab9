@@ -53,7 +53,7 @@ void findNext(int startingValue)
   nextValue = startingValue; // start looking at the user's starting value
 
   // these functions return 0 if the number inputted is not a significant number, so keep going until one of them returns something other than 0
-  while((isPerfectSquare(nextValue) == 0) && (findSemisquare(nextValue) == 0))
+  while((isPerfectSquare(nextValue) == 0) && (calcSemisquare(nextValue) == 0))
   {
     printf("\n%d\n", nextValue);
     printf("%d\n", isPerfectSquare(nextValue));
@@ -65,12 +65,12 @@ void findNext(int startingValue)
 
   if(isPerfectSquare(nextValue) != 0) // if it's a perfect square, return that
   {
-    printf("\nIdentified Value: %d\n", isPerfectSquare(nextValue));
+    printf("\nIdentified Value: %d\n", nextValue);
     printf("Status: Perfect square\n");
   }
   else // the only other option after the while loop is that it's a semisquare
   {
-    printf("\nIdentified Value :%d\n", findSemisquare(nextValue));
+    printf("\nIdentified Value :%d\n", calcSemisquare(nextValue));
     printf("Status: Semi-square\n");
   }
 }
