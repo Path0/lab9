@@ -26,13 +26,13 @@ int main()
 int getInput()
 {
   int input; //User entered "b" value
-  
+
   do
   {
     printf("Error: Positive values only!\n");
     printf("\nEnter starting value -> ");
     scanf("%d", &input);  
-  } while(input <= 0)
+  } while(input <= 0);
   
   
   return input;
