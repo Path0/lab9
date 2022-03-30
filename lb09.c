@@ -47,7 +47,7 @@ int isPerfectSquare(int number)
   return squareValue;
 }
 
-int findNext(int startingValue)
+void findNext(int startingValue)
 {
   int nextValue; // next integer value of significance
   nextValue = startingValue; // start looking at the user's starting value
@@ -66,7 +66,7 @@ int findNext(int startingValue)
   else // the only other option after the while loop is that it's a semisquare
   {
     printf("\nIdentified Value :%d", calcSemiSquare(nextValue));
-    printf("Status: Semi-square\n")
+    printf("Status: Semi-square\n");
   }
 }
 
@@ -107,6 +107,7 @@ int findSemisquare(int b)
   
   while(valFound == 0)
   {
+    ++b;
     for(a = 1; a < b; a++)
     {
       for(c = 1; c < a; c++)
@@ -117,7 +118,6 @@ int findSemisquare(int b)
         }
       }
     }
-    ++b;
   }
   return b;
 }
