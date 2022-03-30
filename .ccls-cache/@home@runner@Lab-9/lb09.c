@@ -60,7 +60,7 @@ void findNext(int startingValue)
 
   if(isPerfectSquare(nextValue) != 0) // if it's a perfect square, return that
   {
-    printf("\nIdentified Value: %d", isPerfectSquare(nextValue));
+    printf("\nIdentified Value: %d\n", isPerfectSquare(nextValue));
     printf("Status: Perfect square\n");
   }
   else // the only other option after the while loop is that it's a semisquare
@@ -107,8 +107,8 @@ int findSemisquare(int b)
   
   while(valFound == 0)
   {
-    b++;
-    for(a = 1; a < b; a++)
+    
+    for(a = 1; a < b++; a++)
     {
       for(c = 1; c < a; c++)
       {
