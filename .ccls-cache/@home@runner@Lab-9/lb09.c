@@ -57,7 +57,7 @@ void findNext(int startingValue)
   {
     printf("\n%d\n", nextValue);
     printf("%d\n", isPerfectSquare(nextValue));
-    printf("%d\n\n", findSemisquare(nextValue));
+    printf("%d\n\n", calcSemisquare(nextValue));
     nextValue++; 
    
     // add 1 to the next value to check the next number for significance
