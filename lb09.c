@@ -4,7 +4,7 @@
 int getInput();
 int isPerfectSquare(int);
 int findPerfectSquare(int);
-int findNext(int);
+int= findNext(int);
 int calcSemisquare(int);
 int findSemisquare(int);
 
@@ -99,8 +99,8 @@ int calcSemisquare (int input)
 
 int findSemisquare(int b)
 {
-  int valFound; // checks to see if the vla
-  int a;
+  int valFound; // stores a 1 or 0, depending on the value has been found
+  int a; // 'a' value from eq
   int c;
   
   valFound = 0;
