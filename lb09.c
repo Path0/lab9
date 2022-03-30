@@ -144,7 +144,7 @@ void print(int output, int status)
   }
   else // the only other option after the while loop is that it's a semisquare
   {
-    printf("\nIdentified alue: %d\n", output);
+    printf("\nIdentified value: %d\n", output);
     printf("Status: Semi-square\n");
   }
   return;
