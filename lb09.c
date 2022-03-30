@@ -139,12 +139,12 @@ void print(int output, int status)
 {
   if(status == 1) // if it's a perfect square, return that
   {
-    printf("\nIdentified Value: %d\n", output);
+    printf("\nIdentified value: %d\n", output);
     printf("Status: Perfect square\n");
   }
   else // the only other option after the while loop is that it's a semisquare
   {
-    printf("\nIdentified Value: %d\n", output);
+    printf("\nIdentified alue: %d\n", output);
     printf("Status: Semi-square\n");
   }
   return;
