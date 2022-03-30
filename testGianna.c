@@ -2,16 +2,16 @@
 #include <math.h>
 
 
-int findPerfectSquare(int);
-int getInput()
+int findSemisquare(int);
+int getInput();
 
 int main()
 {
   int b;
 
+  b = getInput();
   
-  
-  findPerfectSquare(b);
+  printf("semisquare: %d", findSemisquare(b));
   return 0;
 }
 

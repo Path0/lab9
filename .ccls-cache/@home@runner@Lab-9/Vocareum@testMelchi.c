@@ -3,7 +3,9 @@
 
 int main()
 {
-  printf("%d\n");
+  int test;
+
+  test = calcSemisqaure(27);
   return 0;
 }
 
@@ -28,6 +30,6 @@ int calcSemisquare (int input)
     }
   }
 
-  printf("Semisqare ")
+  printf("Semisquare value is: %d", semiSquare);
   return (semiSquare);
 }
