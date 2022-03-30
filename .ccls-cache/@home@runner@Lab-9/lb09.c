@@ -107,7 +107,7 @@ int calcSemisquare (int input)
 
 
 
-int findIdentifiedVal(int b)
+int findIndentifiedVal(int b)
 {
   int valFound; // stores a 0 or 1 for the while condition
   int a; // the 'a' value in the equation
