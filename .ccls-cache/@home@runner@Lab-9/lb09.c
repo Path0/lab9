@@ -21,13 +21,12 @@ int getInput()
 
 int isPerfectSquare(int number)
 {
-  double square;
   int currentSquare;
   int index;
   int squareValue;
-  for(index = 0; index < ((int) sqrt(numeber)) + 1; index++)
+  for(index = 0; index < ((int) sqrt(number)) + 1; index++)
   { 
-    currentSquare = power(index, 2);
+    currentSquare = pow(index, 2);
     if(number == currentSquare)
     {
       squareValue = index;
@@ -41,9 +40,36 @@ int isPerfectSquare(int number)
 
 int calcSemisquare (int input)
 {
-  
+  int semiSquare;
+  int square;
+  int 
+
+  semiSquare = 0;
+
+  while(semiSquare < input)
+  {
+    
+  }
 }
 
 
 
-int f
+int findSemisquare(int b)
+{
+  int valFound;
+  int a;
+  int c;
+  
+  valFound = 0;
+  
+  while(valFound == 0)
+  {
+    for(a = 1; valFound == 0; a++)
+    {
+      for(c = 1; c < a; c+=)    
+    }
+      
+  }
+
+  
+}
