@@ -70,7 +70,7 @@ void findNext(int startingValue)
   }
   else // the only other option after the while loop is that it's a semisquare
   {
-    printf("\nIdentified Value :%d\n", calcSemisquare(nextValue));
+    printf("\nIdentified Value: %d\n", calcSemisquare(nextValue));
     printf("Status: Semi-square\n");
   }
 }
