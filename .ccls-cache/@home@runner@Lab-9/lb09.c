@@ -1,4 +1,5 @@
 
+int getInput();
 int isPerfectSquare(int);
 int findPerfectSquare(int);
 int findNext(int);

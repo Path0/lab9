@@ -41,7 +41,7 @@ int findSemisquare(int b)
       {
         if (((double)b / c) == pow(a, 2))
         {
-          valFound == 1;
+          valFound = 1;
         }
       }
     }
