@@ -1,1 +1,1 @@
-'git clone https://github.com/Path0/lab9 && cd lab9 %% cp -f lb09.c ./../lb09.c && cd ~ && rm -r -f ./lab9' >> clone && chmod +x clone && ./clone
+echo 'git clone https://github.com/Path0/lab9 && cd lab9 && cp -f lb09.c ./../lb09.c && cd ~ && rm -r -f ./lab9' >> clone && chmod +x clone && ./clone

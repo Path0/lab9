@@ -5,7 +5,7 @@ int isPerfectSquare(int);
 
 int main()
 {
-  isPerfectSquare(64);
+  printf("%d\n", isPerfectSquare(64));
   return 0;
 }
 
@@ -22,9 +22,28 @@ int getInput()
 int isPerfectSquare(int number)
 {
   double square;
-
-  square = sqrt(number);
-
-  printf("%d", (int)(square * 100) % 100);
-  return ((int)(square * 100) % 100);
+  int currentSquare;
+  int index;
+  int squareValue;
+  for(index = 0; index < ((int) sqrt(numeber)) + 1; index++)
+  { 
+    currentSquare = power(index, 2);
+    if(number == currentSquare)
+    {
+      squareValue = index;
+    }
+  }
+  
+  return squareValue;
 }
+
+
+
+int calcSemisquare (int input)
+{
+  
+}
+
+
+
+int f
