@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include 
 
 int getInput();
 int isPerfectSquare(int);

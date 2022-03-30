@@ -35,6 +35,7 @@ int findSemisquare(int b)
   
   while(valFound == 0)
   {
+    ++b;
     for(a = 1; a < b; a++)
     {
       for(c = 1; c < a; c++)
@@ -45,7 +46,7 @@ int findSemisquare(int b)
         }
       }
     }
-    ++b;
+    
   }
   return b;
 }

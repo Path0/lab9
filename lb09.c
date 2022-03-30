@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <math.h>
 
 int getInput();
 int isPerfectSquare(int);
@@ -111,7 +113,7 @@ int findSemisquare(int b)
       {
         if (((double)b / c) == pow(a, 2))
         {
-          valFound == 1;
+          valFound = 1;
         }
       }
     }
