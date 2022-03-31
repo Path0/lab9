@@ -128,7 +128,7 @@ int findIndentifiedVal(int b)
   
   while(valFound == 0)
   {
-    for(a = sqrt(a); a < b; a++)
+    for(a = b / 2; a < b; a++)
     {
       for(c = 1; c < a; c++)
       {
