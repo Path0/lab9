@@ -1,17 +1,31 @@
+/*****+--***---*-*-*---*-**-*---*---**-*****--******************************
+*
+*  Lab #: 9
+*
+*  Academic Integrity Statement:
+*
+*  We have not used source code obtained from any other unauthorized source,
+*  either modified or unmodified.  Neither have we provided access to our code
+*  to another. The effort we are submitting is our own original work.
+*
+*  Program Description: Given a starting integer, finds the next perfect square
+*  or semisquare and displays this to the console.
+*
+******+--***---*-*-*---*-**-*---*---**-*****--*****************************/
+
 #include <stdio.h>
 #include <math.h>
 
-int getInput();
-int isPerfectSquare(int);
-//void findNext(int);
-int findIndentifiedVal(int);
-void print(int, int);
+int getInput(); //Gets the starting value from the user
+int findIndentifiedVal(int); //Calculates a square or semisquare value that is equal to or greater than the user inputed number
+int isPerfectSquare(int); //Checks if the returned value is a perfect square or not
+void print(int, int); //Outputs the identified value and if it is a square or semisquare
 
 int main()
 {
-  int startingNumber; // user's input, number to start looking for significant numbers 
-  int output;
-  int status;
+  int startingNumber; // User's input, number to start looking for significant numbers 
+  int output; //Calculared Identified value
+  int status; //Value reprenting if output is a square or semisquare
   
   startingNumber = getInput();
 
@@ -23,9 +37,24 @@ int main()
   return 0;
 }
 
+/*****+-**------*---**-*-**---*-*-*--*-*****--******************************
+*
+*  Function Information
+*
+*  Name of Function: getInput
+*
+*  Function Return Type: int
+*
+*  Parameters (list data type, name, and comment one per line):
+*
+*  Function Description: Asks the user for a starting value and checks if the
+*  inputed number is positive or not. If the value is not positive asks the user
+*  enter a new value that is positive
+*
+******+-**------*---**-*-**---*-*-*--*-*****--*****************************/
 int getInput()
 {
-  int input; // User inputed parity number 
+  int input; // User inputed starting number 
 
   do
   {
@@ -34,13 +63,28 @@ int getInput()
 
     if (input < 1)
     {
-      printf("\nError! Starting value must be positive!\n\n");
+      printf("\nError! Positive values only!\n\n");
     }
   }while(input < 1);
 
   return(input);
 }
 
+/*****+-**------*---**-*-**---*-*-*--*-*****--******************************
+*
+*  Function Information
+*
+*  Name of Function: isPerfectSquare
+*
+*  Function Return Type: int
+*
+*  Parameters (list data type, name, and comment one per line):
+*  1. int, number, is the calculated square or semisquare
+*
+*  Function Description: Calculates if the inputed number is a perfect square
+*  or not. If the value is a perfect sqaure returns 1, otherwise returns 0. 
+*
+******+-**------*---**-*-**---*-*-*--*-*****--*****************************/
 int isPerfectSquare(int number)
 {
   int currentSquare; // current square value being checked against
@@ -59,62 +103,21 @@ int isPerfectSquare(int number)
   
   return squareValue;
 }
-/*
-void findNext(int startingValue)
-{
-  int nextValue; // next integer value of significance
-  nextValue = startingValue; // start looking at the user's starting value
 
-  // these functions return 0 if the number inputted is not a significant number, so keep going until one of them returns something other than 0
-  while((isPerfectSquare(nextValue) == 0) && (calcSemisquare(nextValue) == 0))
-  {
-    printf("\n%d\n", nextValue);
-    printf("%d\n", isPerfectSquare(nextValue));
-    printf("%d\n\n", calcSemisquare(nextValue));
-    nextValue++; 
-   
-    // add 1 to the next value to check the next number for significance
-  }
-
-  if(isPerfectSquare(nextValue) != 0) // if it's a perfect square, return that
-  {
-    printf("\nIdentified Value: %d\n", nextValue);
-    printf("Status: Perfect square\n");
-  }
-  else // the only other option after the while loop is that it's a semisquare
-  {
-    printf("\nIdentified Value: %d\n", calcSemisquare(nextValue));
-    printf("Status: Semi-square\n");
-  }
-}
-*/
-
-int calcSemisquare (int input)
-{
-  int semiSquare;
-  int square;
-  int multiplier;
-  
-
-  semiSquare = 0;
-  square = 1;
-  multiplier = 0;
-
-  while(semiSquare < input)
-  {
-    square += 1;
-    while(semiSquare < input || multiplier < (square - 1) )
-    {
-      multiplier += 1;
-      semiSquare = square * square * multiplier;
-    }
-  }
-  
-  return (semiSquare);
-}
-
-
-
+/*****+-**------*---**-*-**---*-*-*--*-*****--******************************
+*
+*  Function Information
+*
+*  Name of Function: findIndentifiedVal
+*
+*  Function Return Type: int
+*
+*  Parameters (list data type, name, and comment one per line):
+*  1. int, b, is the user inputed starting value
+*
+*  Function Description:
+*
+******+-**------*---**-*-**---*-*-*--*-*****--*****************************/
 int findIndentifiedVal(int b)
 {
   int valFound; // stores a 0 or 1 for the while condition
@@ -129,7 +132,7 @@ int findIndentifiedVal(int b)
     {
       for(c = 1; c < a; c++)
       {
-        if (((double)b / c) == pow(a, 2))
+        if ( ((double)b / c) == pow(a, 2))
         {
           valFound = 1;
         }
@@ -143,16 +146,32 @@ int findIndentifiedVal(int b)
   return b;
 }
 
+/*****+-**------*---**-*-**---*-*-*--*-*****--******************************
+*
+*  Function Information
+*
+*  Name of Function:
+*
+*  Function Return Type: void
+*
+*  Parameters (list data type, name, and comment one per line):
+*  1. int, output, the calculated next highest square or semisquare value
+*  2. int, status, a boolean value representing if the output is a perfect sqaure or not
+*
+*  Function Description: Outputs a square or semisquare that is equal to or greater than
+*  the user inputed number. It also outputs if the calculated value is a perfect sqaure
+*  or if it is a Semi-square. 
+*
+******+-**------*---**-*-**---*-*-*--*-*****--*****************************/
 void print(int output, int status)
 {
+  printf("\nIdentified value: %d\n", output);
   if(status == 1) // if it's a perfect square, return that
   {
-    printf("\nIdentified value: %d\n", output);
     printf("Status: Perfect square\n");
   }
   else // the only other option after the while loop is that it's a semisquare
   {
-    printf("\nIdentified value: %d\n", output);
     printf("Status: Semi-square\n");
   }
   return;

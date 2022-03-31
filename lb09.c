@@ -8,7 +8,8 @@
 *  either modified or unmodified.  Neither have we provided access to our code
 *  to another. The effort we are submitting is our own original work.
 *
-*  Program Description:
+*  Program Description: Given a starting integer, finds the next perfect square
+*  or semisquare and displays this to the console.
 *
 ******+--***---*-*-*---*-**-*---*---**-*****--*****************************/
 
